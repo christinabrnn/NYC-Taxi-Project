@@ -1,9 +1,19 @@
-# NYC-Taxi-Project
-This project analyzes New York City taxi fare pricing patterns using unsupervised machine learning techniques such as K-means clustering, hierarchical clustering, and anomaly detection. The goal is to uncover potential fare discrepancies, assess the impact of congestion pricing, and identify unfair pricing trends across different neighborhoods.
+# NYC Taxi Fare Analysis
 
-- [Dataset](#dataset)
-- [Methodology](#methodology)
-- [Contributor](#contributor)
+This project analyzes New York City taxi fare pricing patterns using unsupervised machine learning techniques, including **K-Means clustering, hierarchical clustering, and anomaly detection**. The goal is to **identify fare discrepancies, assess the impact of congestion pricing, and detect unfair pricing trends** across different neighborhoods.
 
-#
-Through this project, we hope to answer critical questions like fare equity across neighborhoods and how location influences price fluctuations. Our analysis will dive into understanding how pricing varies across the city, with a particular focus on the new congestion pricing zone. Using unsupervised machine learning techniques such as dimensionality reduction, K-means, hierarchical clustering, and anomaly detection we aim to uncover associations and patterns in the data. By analyzing trip data, we will identify location-based pricing trends and detect areas where fare increases are disproportionately high due to congestion pricing. For example, we will assess whether certain areas experience higher price variability than others, potentially highlighting regions where pricing structures could be adjusted for passengers. This information could be useful for policymakers and transportation authorities in improving pricing models, ensuring its fairness, and optimizing taxi operations across New York City. This deeper dive into spatial patterns and pricing will provide insights not only into current fare disparities but also into ways to improve the overall transparency and fairness of the city's taxi fare system, ensuring it meets the needs of both passengers and operators.
+## Dataset  
+We use the **NYC Yellow Taxi Trip Dataset** from [NYC Open Data](https://data.cityofnewyork.us/Transportation/2023-Yellow-Taxi-Trip-Data/4b4i-vvec/about_data), which includes:  
+- **Trip Details:** `tpep_pickup_datetime`, `tpep_dropoff_datetime`, `trip_distance`, `passenger_count`  
+- **Location Identifiers:** `PULocationID`, `DOLocationID`  
+- **Fare Breakdown:** `fare_amount`, `extra`, `mta_tax`, `tip_amount`, `tolls_amount`, `total_amount`, `congestion_surcharge`, `airport_fee`  
+- **Additional Information:** `VendorID`, `RatecodeID`, `store_and_fwd_flag`, `payment_type`, `improvement_surcharge`
+
+## Methodology  
+We apply **Principal Component Analysis (PCA)** to reduce dataset dimensionality while preserving over **90% of variance**, ensuring more efficient clustering. The **key PCA components** are then used for **K-Means clustering** to classify taxi trips based on fare patterns. The optimal number of clusters is determined using the **Elbow Method** and **Silhouette Score**, allowing for well-defined groupings. This approach **minimizes noise, enhances clustering accuracy, and uncovers fare trends**, particularly the impact of congestion pricing.
+
+## Contributors  
+- **Jooyeon Lee**  
+- **Crystal Leatvanich**  
+- **Courtney Vincent**  
+- **Christina Son**
