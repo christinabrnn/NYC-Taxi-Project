@@ -1,6 +1,6 @@
 ## NYC Taxi Fare Analysis
 
-This project analyzes New York City taxi fare pricing patterns using unsupervised machine learning techniques, including K-Means clustering, hierarchical clustering, and anomaly detection. The goal is to identify fare discrepancies, assess the impact of congestion pricing, and detect unfair pricing trends across different neighborhoods.
+This project analyzes New York City taxi fare pricing patterns using unsupervised machine learning techniques, including K-Means clustering and association rule mining. The goal is to identify fare discrepancies, assess the impact of congestion pricing, and uncover potential pricing inconsistencies across different trip types. After clustering trips based on fare structures and travel patterns, association rules are applied to reveal underlying relationships between trip attributes, such as congestion surcharges and interborough travel.
 
 ### Dataset  
 
@@ -12,7 +12,7 @@ We use the NYC Yellow Taxi Trip Dataset from [NYC Open Data](https://data.cityof
 
 ### Methodology  
 
-We apply Principal Component Analysis (PCA to reduce dataset dimensionality while preserving over 90% of variance, ensuring more efficient clustering. The key PCA components are then used for K-Means clustering to classify taxi trips based on fare patterns. The optimal number of clusters is determined using the Elbow Method and Silhouette Score, allowing for well-defined groupings. This approach minimizes noise, enhances clustering accuracy, and uncovers fare trends, particularly the impact of congestion pricing.
+We apply Principal Component Analysis (PCA) to reduce dataset dimensionality while preserving over 90% of the variance, ensuring more efficient clustering. The key PCA components are then used for K-Means clustering to classify taxi trips based on fare patterns. Based on the clusters, we further analyzed the root causes of congestion pricing using association rules. This approach helps identify key pricing trends, customer behavior, and potential improvements for taxi fare transparency.
 
 ### Contributors  
 
